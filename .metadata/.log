@@ -104,3 +104,18 @@ END
 
 !ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-06 10:49:20.211
 !MESSAGE Classpath changed for project: demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-06 11:05:06.203
+!MESSAGE Classpath changed for project: RatingSystem
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-06 11:05:06.246
+!MESSAGE Classpath changed for project: demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-06 11:05:06.247
+!MESSAGE Boot project REMOVED: demo
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-06 11:05:14.618
+!MESSAGE Classpath changed for project: RatingSystem
+
+!ENTRY org.springframework.tooling.boot.ls 1 0 2025-03-06 11:05:14.678
+!MESSAGE Boot project ADDED: RatingSystem
