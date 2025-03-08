@@ -24,12 +24,15 @@ public class UserController {
 	}
 	
 	@GetMapping("/get/{id}")
-	public ResponseEntity<Optional<User>> getuser(@RequestBody String id){
+	public ResponseEntity<Optional<User>> getuser(@PathVariable int id){
+		System.out.println(id);
 		return ResponseEntity.ok(userService.getuser(id));
 	}
 	
 	@PostMapping("/save")
 	public ResponseEntity<User> saveUser(@RequestBody User user){
+		System.out.println(user);
+		//User u1=userService.saveUser(user);
 		return ResponseEntity.ok(userService.saveUser(user));
 	}
 	
