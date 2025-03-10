@@ -6,7 +6,8 @@ import org.springframework.stereotype.Repository;
 import com.microservice.userService.Entity.User;
 
 @Repository
-public interface UserRepository extends JpaRepository<User,Integer>{
+public interface UserRepository extends JpaRepository<User, String> {
 	User findByUserEmail(String userEmail);
-	User findByUserId(int userId);
+
+	User findByUserId(String userId);
 }

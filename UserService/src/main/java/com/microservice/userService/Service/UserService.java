@@ -8,39 +8,49 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.microservice.userService.Entity.User;
+import com.microservice.userService.Exception.ResourceAlreadyFoundException;
+import com.microservice.userService.Exception.ResourceNotFoundException;
 import com.microservice.userService.Repository.UserRepository;
 
 @Service
-public class UserService {
-	
+public class UserService implements UserServiceInterface {
+
 	@Autowired
 	UserRepository repository;
-	
-	
+
 	public List<User> getAll() {
 		return repository.findAll();
-		
+
 	}
-	
-	public Optional<User> getuser(int id){
-		return repository.findById(id);
+
+	public User getuser(String id) {
+		return repository.findById(id)
+				.orElseThrow(() -> new ResourceNotFoundException("User not found on server with id- " + id));
 	}
-	
-	public User saveUser(User user){
-		User u1=new User();
-		System.out.println(u1);
-		
-		Optional<User> existEmail=Optional.ofNullable(repository.findByUserEmail(user.getUserEmail())); 
-		if(!existEmail.isPresent()) {
-			u1=repository.save(user);
+
+	public User saveUser(User user) {
+		user.setUserId(UUID.randomUUID().toString());
+		Optional<User> u1 = Optional.empty();
+		Optional<User> existEmail = Optional.ofNullable(repository.findByUserEmail(user.getUserEmail()));
+		if (!existEmail.isPresent()) {
+			u1 = Optional.of(repository.save(user));
 		}
-		System.out.println(u1);
-		return u1;
+
+		return u1.orElseThrow(
+				() -> new ResourceAlreadyFoundException("Email Aready Exixt with email- " + user.getUserEmail()));
+
 	}
-	
-	public User updateUser(User user){
-		return repository.save(user);
+
+	public User updateUser(User user) {
+		Optional<User> u1 = Optional.empty();
+		Optional<User> existEmail = Optional.ofNullable(repository.findByUserEmail(user.getUserEmail()));
+		getuser(user.getUserId());
+		if (!existEmail.isPresent()) {
+			u1 = Optional.of(repository.save(user));
+		}
+
+		return u1.orElseThrow(() -> new ResourceAlreadyFoundException(
+				"Email Aready Exist with email- " + user.getUserEmail() + " . Give another userEmail to update"));
 	}
-	
 
 }
