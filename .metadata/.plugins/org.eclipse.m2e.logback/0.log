@@ -350,3 +350,15 @@
 2025-03-07 08:58:22,988 [Worker-2: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\SpringBootProjects\Rating System for hotel using Microservices\UserService\src\test\resources
 2025-03-07 08:58:29,886 [Stop Help Server] INFO  org.eclipse.jetty.server.Server - Stopped oejs.Server@5ac2c7af{STOPPING}[12.0.15,sto=0]
 2025-03-07 08:58:29,922 [Stop Help Server] INFO  o.e.jetty.server.AbstractConnector - Stopped ServerConnector@382842c5{HTTP/1.1, (http/1.1)}{127.0.0.1:0}
+2025-03-08 19:31:24,480 [Worker-0: Loading available Gradle versions] INFO  o.e.b.c.i.u.g.PublishedGradleVersions - Gradle version information cache is out-of-date. Trying to update.
+2025-03-08 19:31:57,318 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update started
+2025-03-08 19:31:59,381 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.l.LifecycleMappingFactory - Using org.eclipse.m2e.jdt.JarLifecycleMapping lifecycle mapping for MavenProject: com.microservice.userService:userService:0.0.1-SNAPSHOT @ D:\SpringBootProjects\Rating System for hotel using Microservices\UserService\pom.xml.
+2025-03-08 19:32:01,959 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UserService/src/main/java
+2025-03-08 19:32:01,963 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UserService/src/main/resources
+2025-03-08 19:32:01,964 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UserService/src/main/resources
+2025-03-08 19:32:01,966 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding source folder /UserService/src/test/java
+2025-03-08 19:32:01,968 [Worker-0: Updating Maven Project] INFO  o.e.m.j.i.AbstractJavaProjectConfigurator - Adding resource folder /UserService/src/test/resources
+2025-03-08 19:32:03,581 [Worker-0: Updating Maven Project] INFO  o.e.m.c.i.p.ProjectConfigurationManager - Update completed for 1 poms: local refresh takes 0.00 sec, refresh facades takes 4.00 sec, update config takes 1.00 sec 
+2025-03-08 19:32:04,955 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 1 resource from src\main\resources to target\classes
+2025-03-08 19:32:04,984 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - Copying 0 resource from src\main\resources to target\classes
+2025-03-08 19:32:04,993 [Worker-6: Building] INFO  o.a.m.s.f.DefaultMavenResourcesFiltering - skip non existing resourceDirectory D:\SpringBootProjects\Rating System for hotel using Microservices\UserService\src\test\resources

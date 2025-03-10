@@ -27,10 +27,15 @@ public class UserService {
 	}
 	
 	public User saveUser(User user){
-		Optional<User> exist=repository.findByuserEmail(user.getUserEmail()); 
+		User u1=new User();
+		System.out.println(u1);
 		
-		
-		return repository.save(user);
+		Optional<User> existEmail=Optional.ofNullable(repository.findByUserEmail(user.getUserEmail())); 
+		if(!existEmail.isPresent()) {
+			u1=repository.save(user);
+		}
+		System.out.println(u1);
+		return u1;
 	}
 	
 	public User updateUser(User user){

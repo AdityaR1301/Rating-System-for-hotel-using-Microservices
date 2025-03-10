@@ -9,12 +9,9 @@ import jakarta.persistence.*;
 public class User {
 
 	@Id
-	//@Column(name="userid")
-	//@GeneratedValue(strategy = GenerationType.AUTO)
+	@GeneratedValue(strategy = GenerationType.AUTO)
 	private int userId;
-	//@Column(name="username")
 	private String userName;
-	//@Column(name="useremail")
 	private String userEmail;
 	
 	@Override
@@ -32,7 +29,6 @@ public class User {
 
 	public User() {
 		super();
-		// TODO Auto-generated constructor stub
 	}
 
 	public int getUserId() {

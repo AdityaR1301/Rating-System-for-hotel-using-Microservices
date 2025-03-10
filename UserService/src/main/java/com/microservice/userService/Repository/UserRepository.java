@@ -7,5 +7,6 @@ import com.microservice.userService.Entity.User;
 
 @Repository
 public interface UserRepository extends JpaRepository<User,Integer>{
-
+	User findByUserEmail(String userEmail);
+	User findByUserId(int userId);
 }
