@@ -1,0 +1,7 @@
+spring:
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017
+      database: micro_Rating
+server:
+  port: 8083

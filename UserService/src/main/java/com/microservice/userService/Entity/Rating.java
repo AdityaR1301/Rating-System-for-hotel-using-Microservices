@@ -5,10 +5,16 @@ public class Rating {
 	private String ratingId;
 	private String userId;
 	private String hotelId;
-	private String hoteId;
 	private int rating;
 	private String feedback;
+	private  Object hotel;
 	
+	public Object getHotel() {
+		return hotel;
+	}
+	public void setHotel(Object hotel) {
+		this.hotel = hotel;
+	}
 	public String getRatingId() {
 		return ratingId;
 	}
@@ -27,12 +33,6 @@ public class Rating {
 	public void setHotelId(String hotelId) {
 		this.hotelId = hotelId;
 	}
-	public String getHoteId() {
-		return hoteId;
-	}
-	public void setHoteId(String hoteId) {
-		this.hoteId = hoteId;
-	}
 	public int getRating() {
 		return rating;
 	}
@@ -46,12 +46,11 @@ public class Rating {
 		this.feedback = feedback;
 	}
 	
-	public Rating(String ratingId, String userId, String hotelId, String hoteId, int rating, String feedback) {
+	public Rating(String ratingId, String userId, String hotelId, int rating, String feedback) {
 		super();
 		this.ratingId = ratingId;
 		this.userId = userId;
 		this.hotelId = hotelId;
-		this.hoteId = hoteId;
 		this.rating = rating;
 		this.feedback = feedback;
 	}
