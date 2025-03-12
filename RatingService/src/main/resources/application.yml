@@ -4,4 +4,4 @@ spring:
       uri: mongodb://localhost:27017
       database: micro_Rating
 server:
-  port: 8083
+  port: 8085

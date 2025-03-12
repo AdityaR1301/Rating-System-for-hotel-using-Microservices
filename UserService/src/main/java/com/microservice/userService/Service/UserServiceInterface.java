@@ -1,6 +1,8 @@
 package com.microservice.userService.Service;
 
 import java.util.List;
+
+import com.microservice.userService.Entity.Rating;
 import com.microservice.userService.Entity.User;
 
 public interface UserServiceInterface {
@@ -12,4 +14,6 @@ public interface UserServiceInterface {
 	public User saveUser(User user);
 
 	public User updateUser(User user);
+	
+	public Rating addRatingFromUser(Rating rating);
 }
